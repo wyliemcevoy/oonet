@@ -20,6 +20,12 @@ DynamicNeuralNet::DynamicNeuralNet(std::initializer_list <int> list) : net{list.
 	}
 }
 
+ostream & operator<<(std::ostream & stream, const DynamicNeuralNet & self)
+{
+	string build;
+	return stream << "Net (" << build << ")";
+}
+
 DynamicNeuralNet::~DynamicNeuralNet()
 {
 }

@@ -6,7 +6,7 @@ class Perceptron;
 
 class Edge
 {
-private:
+protected:
 	double weight;
 	double gradient;
 	std::weak_ptr<Perceptron> head;

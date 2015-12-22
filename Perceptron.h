@@ -1,20 +1,23 @@
 #pragma once
-#include "Edge.h"
 #include <vector>
 #include <memory>
+#include "Node.h"
 
-
-class Perceptron
+class Perceptron : public Node
 {
-private:
-	//std::vector<std::weak_ptr<Edge>> inputs;
-	//std::vector<std::weak_ptr<Edge>> outputs;
-	Edge *e;
+protected:
+	double netIn;
+	double netOut;
+	std::vector<std::weak_ptr<Edge>> inputs;
+
 public:
 	Perceptron();
 	Perceptron(int inEdges, int outEdges);
-	//void addInEdge(std::weak_ptr<Edge> inEdge);
-	//void addOutEdge(std::weak_ptr<Edge> outEdge);
+	void calculate() override;
+	double getNetIn() override;
+	double getNetOut() override;
+	void addInEdge(std::weak_ptr<Edge> inEdge);
+	void addOutEdge(std::weak_ptr<Edge> outEdge) override;
 	~Perceptron();
 };
 
