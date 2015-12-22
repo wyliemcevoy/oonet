@@ -1,16 +1,20 @@
 #pragma once
+#include "Edge.h"
 #include <vector>
 #include <memory>
-#include "Edge.h"
-using namespace std;
+
 
 class Perceptron
 {
 private:
-	vector<weak_ptr<Edge>> inputs;
-	vector<weak_ptr<Edge>> outputs;
+	//std::vector<std::weak_ptr<Edge>> inputs;
+	//std::vector<std::weak_ptr<Edge>> outputs;
+	Edge *e;
 public:
 	Perceptron();
+	Perceptron(int inEdges, int outEdges);
+	//void addInEdge(std::weak_ptr<Edge> inEdge);
+	//void addOutEdge(std::weak_ptr<Edge> outEdge);
 	~Perceptron();
 };
 

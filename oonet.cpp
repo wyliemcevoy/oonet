@@ -4,7 +4,6 @@
 #include "DynamicNeuralNet.h"
 #include <iostream>
 
-
 int main()
 {
 	DynamicNeuralNet net = DynamicNeuralNet{ 1, 2, 3 };

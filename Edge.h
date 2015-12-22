@@ -1,17 +1,23 @@
 #pragma once
-#include "Perceptron.h"
 #include <memory>
-using namespace std;
+#include <vector>
+
+class Perceptron;
 
 class Edge
 {
 private:
 	double weight;
 	double gradient;
-	weak_ptr<Perceptron> head;
-	weak_ptr<Perceptron> tail;
+	std::weak_ptr<Perceptron> head;
+	std::weak_ptr<Perceptron> tail;
 public:
-	Edge(weak_ptr<Perceptron> head, weak_ptr<Perceptron> tail);
+	Edge(std::weak_ptr<Perceptron> head, std::weak_ptr<Perceptron> tail);
 	~Edge();
+
+	double getWeight();
+	double getGradient();
+	void setWeight(double weight);
+	void setGradient(double gradient);
 };
 
