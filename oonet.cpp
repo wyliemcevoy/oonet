@@ -7,7 +7,7 @@
 int main()
 {
 	DynamicNeuralNet net = DynamicNeuralNet{ 1, 2, 3 };
-
+    std:cout << net;
 	// wait wait wait
 	int wait;
 	std::cin >> wait;

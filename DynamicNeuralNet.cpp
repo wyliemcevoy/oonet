@@ -22,8 +22,21 @@ DynamicNeuralNet::DynamicNeuralNet(std::initializer_list <int> list) : net{list.
 
 ostream & operator<<(std::ostream & stream, const DynamicNeuralNet & self)
 {
-	string build;
-	return stream << "Net (" << build << ")";
+	string build = "Net {";
+	for (int i = 0; i < self.net.size(); i++)
+	{
+		build += "(";
+		for (int j = 0; j < self.net[i].size(); j++)
+		{
+			build += "0";
+			if (j != self.net[i].size()) {
+				build += ",";
+			}
+		}
+		build += ") ";
+	}
+	build += "}";
+	return stream <<  build;
 }
 
 DynamicNeuralNet::~DynamicNeuralNet()
