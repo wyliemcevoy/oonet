@@ -19,6 +19,7 @@ double InputNode::getNetIn()
 
 void InputNode::addOutEdge(std::weak_ptr<Edge> outEdge)
 {
+	outputs.push_back(outEdge);
 }
 
 InputNode::InputNode()
