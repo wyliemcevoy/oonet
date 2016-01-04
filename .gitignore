@@ -27,6 +27,13 @@
 *.out
 *.app
 
+# Build Folders
+Debug/
+
+# Logs
+*.log
+*.tlog
+
 # =========================
 # Operating System Files
 # =========================
